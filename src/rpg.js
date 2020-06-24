@@ -43,7 +43,7 @@ export const removeFromArray = (array) => {
   return (element) => {
     return (state) => ({
       ...state,
-      [array]: (state[array].remove(element))
+      [array]: (state[array].filter(item => item != element))
     })
   }
 }
